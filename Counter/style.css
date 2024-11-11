@@ -1,0 +1,35 @@
+.container{
+    border: 0.5px solid rgba(0, 0, 0, 0.192);
+    padding: 60px 60px;
+    border-radius: 8px;
+    box-shadow: -1px 7px 32px -1px rgba(0,0,0,0.62);
+}
+
+.heading{
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+button{
+    margin-top: 40px;
+    background-color: rgba(28, 138, 28, 0.847);
+    height: 45px;
+    width: 130px;
+    border: none;
+    border-radius: 8px;
+    gap: 10px;
+    margin-left: 15px;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+}
+
+button:hover{
+    background-color: green;
+    transform: scale(1.2); 
+    transition: transform 0.3s ease; 
+}
+
+.counter-display{
+    font-size: 5rem;
+}
