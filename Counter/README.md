@@ -2,8 +2,6 @@
 
 This is a simple JavaScript counter app that allows users to increase, decrease, or reset the counter value. The current value of the counter is displayed in the center of the screen and can be updated using the three buttons below it: "Increase", "Decrease", and "Reset".
 
-![Counter App Screenshot](./images/counter.jpg)
-
 ## Features
 
 - **Increase**: Adds 1 to the counter value.
@@ -21,3 +19,4 @@ This is a simple JavaScript counter app that allows users to increase, decrease,
 - **CSS** for styling the layout and buttons.
 - **JavaScript** for handling counter logic and updating the display.
 
+![Counter App Screenshot](./images/counter.jpg)
