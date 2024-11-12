@@ -1,6 +1,3 @@
-// script.js
-
-// Array of reviews
 const reviews = [
     {
         name: "John Doe",
@@ -19,7 +16,6 @@ const reviews = [
     }
 ];
 
-// Path to the common image
 const imagePath = './images/user.png';
 let currentIndex = 0;
 
@@ -32,10 +28,8 @@ function displayReview(index) {
     document.getElementById('user-image').src = imagePath;
 }
 
-// Display the initial review
 displayReview(currentIndex);
 
-// Event listeners for navigation buttons
 document.getElementById('next').addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % reviews.length;
     displayReview(currentIndex);
