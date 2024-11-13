@@ -35,8 +35,10 @@ h1::after {
     width: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #0077cc; 
+    border: 3px solid #0077ccaf; 
     margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px #065b98);
+    
 }
 
 .description h4 {
