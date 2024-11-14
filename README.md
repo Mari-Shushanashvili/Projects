@@ -16,9 +16,3 @@ A review carousel project that showcases a simple and interactive way to display
 A counter application that helps demonstrate the basics of JavaScript event handling and DOM manipulation. This project is simple yet effective for learning about state changes in a web page.
 
 > _Note:_ Each project has its folder with a `README.md` file containing more specific information and setup instructions.
-
-## Getting Started
-
-To get started with these projects, clone the repository to your local machine:
-
-git clone https://github.com/your-username/Projects.git
