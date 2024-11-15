@@ -14,5 +14,8 @@ Here are some of the projects included in this repository:
 A review carousel project that showcases a simple and interactive way to display user testimonials or reviews. It uses HTML, CSS, and JavaScript to create a sliding interface where users can navigate through reviews.
 ### 2. Counter
 A counter application that helps demonstrate the basics of JavaScript event handling and DOM manipulation. This project is simple yet effective for learning about state changes in a web page.
+### 3. Modal
+A modal window project that demonstrates how to create a responsive and interactive overlay. This project uses Bootstrap for styling and functionality.
+
 
 > _Note:_ Each project has its folder with a `README.md` file containing more specific information and setup instructions.
