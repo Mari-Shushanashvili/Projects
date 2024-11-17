@@ -20,4 +20,6 @@ A modal window project that demonstrates how to create a responsive and interact
 A simple Grocery List web app built using HTML, CSS, and JavaScript. This app allows users to add, edit, and delete grocery items, and it demonstrates the use of basic DOM manipulation, event handling, and local storage.
 
 
+
+
 > _Note:_ Each project has its folder with a `README.md` file containing more specific information and setup instructions.
