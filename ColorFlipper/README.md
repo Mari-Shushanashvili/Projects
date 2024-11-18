@@ -12,5 +12,5 @@ This is a simple web application that allows you to click a button to change the
 - JavaScript
 
 ## demo
-!(Project Demo)[./assets/projectSnap1.jpg]
-!(Project Demo)[./assets/projectSnap2.jpg]
+![Project Demo](./assets/projectSnap1.jpg)
+![Project Demo](./assets/projectSnap2.jpg)
