@@ -1,0 +1,67 @@
+:root {
+    --primary-bg: rgba(210,184,165,255);
+    --primary-text: rgba(37,43,29,255);
+    --secondary-text: rgba(46,39,29,255);
+    --button-bg: rgba(150,99,65,255);
+    --button-hover-bg: rgba(154,86,67,255);
+    --border-color: rgba(72,78,74,255);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--primary-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: black;
+    padding: 20px 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    max-height: 500px;
+}
+
+h1 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--primary-text);
+}
+
+#backgroundColorDisplay{
+    color: white;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--secondary-text);
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 1rem;
+    background-color: var(--button-bg);
+    color: var(--primary-bg);
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+    transform: scale(1.05);
+}
+
+#current-color {
+    font-weight: bold;  
+}
