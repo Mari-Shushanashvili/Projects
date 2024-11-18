@@ -21,6 +21,7 @@ A simple Grocery List web app built using HTML, CSS, and JavaScript. This app al
 ### 5. Color Flipper
 This is a simple web application that allows you to click a button to change the background color of the page. The app displays the name of the current background color and updates the text color to match the background color.
 
-
+### Countdown
+A fun and festive Christmas countdown clock that shows the time remaining until Christmas! This project displays the remaining days, hours, minutes, and seconds in a beautifully styled layout. The design incorporates a Christmas theme with custom fonts and a countdown timer.
 
 > _Note:_ Each project has its folder with a `README.md` file containing more specific information and setup instructions.
