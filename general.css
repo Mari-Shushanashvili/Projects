@@ -1,0 +1,120 @@
+:root {
+  --forest-shadow: rgba(37,43,29,255);
+  --earth-bark: rgba(46,39,29,255);
+  --soft-sand: rgba(224,219,215,255);
+  --rustic-taupe: rgba(130,101,83,255);
+  --burnt-clay: rgba(150,99,65,255);
+  --evergreen-depth: rgba(32,45,38,255);
+  --pale-almond: rgba(210,184,165,255);
+  --terracotta-blush: rgba(154,86,67,255);
+  --slate-moss: rgba(72,78,74,255);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: var(--soft-sand);
+  color: var(--earth-bark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--pale-almond);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--slate-moss);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--forest-shadow);
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--rustic-taupe);
+}
+
+a {
+  text-decoration: none;
+  color: var(--burnt-clay);
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--terracotta-blush);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--evergreen-depth);
+  color: var(--soft-sand);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--forest-shadow);
+  transform: scale(1.05);
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--slate-moss);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus, textarea:focus {
+  border-color: var(--burnt-clay);
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: var(--soft-sand);
+  border: 1px solid var(--slate-moss);
+  border-radius: 5px;
+}
+
+li:hover {
+  background-color: var(--pale-almond);
+}
+
+.navbar {
+  background-color: var(--forest-shadow);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--soft-sand);
+}
+
+.navbar a {
+  color: var(--soft-sand);
+  margin-left: 15px;
+}
+
+.navbar a:hover {
+  color: var(--terracotta-blush);
+}
