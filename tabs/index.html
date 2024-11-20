@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Tabs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-nav">Dynamic Tab Interface</div>
+  <div class="container">
+    <div class="left">
+      <img src="https://picsum.photos/200" alt="Random Image">
+    </div>
+    <div class="right">
+      <div class="tabs">
+        <button class="tab-button" data-tab="tab1">Tab 1</button>
+        <button class="tab-button" data-tab="tab2">Tab 2</button>
+        <button class="tab-button" data-tab="tab3">Tab 3</button>
+      </div>
+      <div class="tab-content">
+        <div id="tab1" class="tab">Content for Tab 1</div>
+        <div id="tab2" class="tab hidden">Content for Tab 2</div>
+        <div id="tab3" class="tab hidden">Content for Tab 3</div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
