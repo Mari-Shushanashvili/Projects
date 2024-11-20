@@ -20,3 +20,4 @@ This is a simple JavaScript counter app that allows users to increase, decrease,
 - **JavaScript** for handling counter logic and updating the display.
 
 ![Counter App Screenshot](./images/counter.jpg)
+
