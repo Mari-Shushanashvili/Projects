@@ -1,4 +1,4 @@
-# Dynamic Tab Interface
+### Dynamic Tab Interface
 
 A responsive dynamic tab interface built with **HTML**, **CSS**, and **JavaScript**. This project features a random image loader, styled navigation-like tabs, and responsive content switching.
 
