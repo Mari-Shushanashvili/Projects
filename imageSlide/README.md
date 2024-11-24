@@ -9,3 +9,9 @@ Welcome to the ** Image Slider**, a visually stunning and fully responsive image
 ###  Interactive Controls  
 - **Navigation Arrows**: Hover near the edges to reveal translucent, sleek arrow buttons for manual navigation.  
 - **Auto-Slide**: The slider cycles through images automatically every 3 seconds for a hands-free experience.  
+
+
+## 📸 Preview  
+
+### Initial Slider View  
+![Image Slider Preview](./assets/projectSnap.jpg) 
