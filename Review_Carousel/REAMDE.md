@@ -42,3 +42,5 @@ This project was designed to improve understanding of:
 ---
 
 **Enjoy exploring the carousel and feel free to customize the review content!**
+
+
