@@ -23,7 +23,7 @@ This is a simple web application that allows you to click a button to change the
 ### 6. Countdown
 A fun and festive Christmas countdown clock that shows the time remaining until Christmas! This project displays the remaining days, hours, minutes, and seconds in a beautifully styled layout. The design incorporates a Christmas theme with custom fonts and a countdown timer.
 ### 7. Image Slider
- ** Image Slider**, a visually stunning and fully responsive image slider. This project combines HTML, CSS, and JavaScript to deliver a seamless and interactive experience for users.
+ **Image Slider**, a visually stunning and fully responsive image slider. This project combines HTML, CSS, and JavaScript to deliver a seamless and interactive experience for users.
 
 
 
