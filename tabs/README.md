@@ -10,7 +10,7 @@ A responsive dynamic tab interface built with **HTML**, **CSS**, and **JavaScrip
 - **Interactive Buttons:** Professionally styled navigation buttons with hover effects.
 - **Modern Aesthetic:** Clean and modern UI with subtle animations and rounded corners.
 
-## Preview
+## Demo
 
 ![Dynamic Tab Interface Screenshot](projectSnap.jpg)
 
@@ -19,4 +19,3 @@ A responsive dynamic tab interface built with **HTML**, **CSS**, and **JavaScrip
 - **HTML**: Structure of the interface.
 - **CSS**: Styling and layout.
 - **JavaScript**: Dynamic functionality for tab switching.
-
