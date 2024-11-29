@@ -20,9 +20,12 @@ A modal window project that demonstrates how to create a responsive and interact
 A simple Grocery List web app built using HTML, CSS, and JavaScript. This app allows users to add, edit, and delete grocery items, and it demonstrates the use of basic DOM manipulation, event handling, and local storage.
 ### 5. Color Flipper
 This is a simple web application that allows you to click a button to change the background color of the page. The app displays the name of the current background color and updates the text color to match the background color.
-
-### Countdown
+### 6. Countdown
 A fun and festive Christmas countdown clock that shows the time remaining until Christmas! This project displays the remaining days, hours, minutes, and seconds in a beautifully styled layout. The design incorporates a Christmas theme with custom fonts and a countdown timer.
+### 7. Image Slider
+ **Image Slider**, a visually stunning and fully responsive image slider. This project combines HTML, CSS, and JavaScript to deliver a seamless and interactive experience for users.
+
+
 
 > _Note:_ Each project has its folder with a `README.md` file containing more specific information and setup instructions.
 
