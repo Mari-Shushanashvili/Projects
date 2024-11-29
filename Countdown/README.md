@@ -16,3 +16,5 @@ A fun and festive Christmas countdown clock that shows the time remaining until 
 - JavaScript
 
 ![project snap](./assets/countdown.jpg)
+
+
