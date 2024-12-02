@@ -4,9 +4,9 @@ This is a simple JavaScript counter app that allows users to increase, decrease,
 
 ## Features
 
-- **Increase**: Adds 1 to the counter value.
-- **Decrease**: Subtracts 1 from the counter value.
-- **Reset**: Sets the counter value back to 0.
+- **Increase**: Adds 1 to the counter value
+- **Decrease**: Subtracts 1 from the counter value
+- **Reset**: Sets the counter value back to 0
 
 ## How to Run
 
