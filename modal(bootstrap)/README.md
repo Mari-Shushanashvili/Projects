@@ -4,5 +4,4 @@ This modal window project that demonstrates how to create an interactive overlay
 ![Modal Screenshot](./images/modal1.jpg)
 ---
 ![Modal Screenshot](./images/modal2.jpg)
-
---
+---
