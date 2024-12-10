@@ -12,6 +12,5 @@ Welcome to the ** Image Slider**, a visually stunning and fully responsive image
 
 
 ## 📸 Preview  
-
-### Initial Slider View  
+  
 ![Image Slider Preview](./assets/projectSnap.jpg) 
