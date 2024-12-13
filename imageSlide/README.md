@@ -11,6 +11,6 @@ Welcome to the ** Image Slider**, a visually stunning and fully responsive image
 - **Auto-Slide**: The slider cycles through images automatically every 3 seconds for a hands-free experience.  
 
 
-## 📸 Preview  
+## Preview  
   
 ![Image Slider Preview](./assets/projectSnap.jpg) 
