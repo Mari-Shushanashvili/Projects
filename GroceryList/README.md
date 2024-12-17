@@ -15,6 +15,6 @@ A simple Grocery List web app built using HTML, CSS, and JavaScript. This app al
 - **CSS**: Styling and layout.
 - **JavaScript**: Functionality for adding, editing, and deleting items.
 
-##  demo
+##  Demo
 
 ![Grocery List](projectSnap.jpg)
