@@ -88,7 +88,6 @@ Flashcards-App/
         PGPASSWORD=password
         PGDATABASE=name
         PGPORT=5992
-        PORT=3005 # Optional: Port for the backend server
         ```
     *   Setup Database Schema: Connect to your PostgreSQL instance using `psql` or a GUI tool. Create the database specified in `.env`. Execute the SQL commands in `backend/schema.sql` against your database.
     *   Run Backend Dev Server: `npm run dev` (Keep this terminal running)
