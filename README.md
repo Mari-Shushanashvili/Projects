@@ -77,12 +77,12 @@ Flashcards-App/
     *   Install dependencies: `npm install`
     *   Create `.env` file: Copy `.env.example` (if provided) or create `.env` and add your PostgreSQL connection details:
         ```dotenv
-        PGHOST=localhost
-        PGUSER=your_db_user
-        PGPASSWORD=your_db_password
-        PGDATABASE=your_db_name
-        PGPORT=5432
-        PORT=3001 # Optional: Port for the backend server
+        PGHOST=host
+        PGUSER=db_abuser
+        PGPASSWORD=password
+        PGDATABASE=name
+        PGPORT=5992
+        PORT=3005 # Optional: Port for the backend server
         ```
     *   Setup Database Schema: Connect to your PostgreSQL instance using `psql` or a GUI tool. Create the database specified in `.env`. Execute the SQL commands in `backend/schema.sql` against your database.
     *   Run Backend Dev Server: `npm run dev` (Keep this terminal running)
