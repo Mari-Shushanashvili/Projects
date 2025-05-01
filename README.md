@@ -1,32 +1,151 @@
-# Projects
+# Flashcard Quick Capture & Gesture Review (MIT 6.102 Project)
 
-Welcome to the **Projects** repository! This repository includes a collection of Front End projects aimed at showcasing various web development skills and techniques.
+## Description
 
-## About
+This project enhances the flashcard learning experience by combining a browser extension for quick card creation with webcam-based gesture recognition for card review, built upon the concepts from MIT 6.102 Software Construction.
 
-This repository is dedicated to Front End development projects built using HTML, CSS, JavaScript, and various other frontend frameworks and libraries. These projects range from beginner to intermediate level, each designed to improve my skills in responsive design, animations, component-based architecture, and more.
+It allows users to:
+1.  Highlight text on any webpage and quickly create a flashcard front using a browser extension popup.
+2.  Add a corresponding back text within the popup.
+3.  Save the new flashcard to a persistent backend database.
+4.  Review flashcards that are due using the extension popup.
+5.  Indicate review difficulty (Easy, Hard, Wrong) by making simple hand gestures (Thumbs Up, Flat Hand, Thumbs Down) recognized via the webcam using TensorFlow.js Hand Pose Detection.
 
-## Projects
+The system uses a simple Spaced Repetition System (SRS) logic on the backend to schedule card reviews based on user input.
 
-Here are the projects included in this repository:
+## Features
 
-### 1. Review Carousel
-A review carousel project that showcases a simple and interactive way to display user testimonials or reviews. It uses HTML, CSS, and JavaScript to create a sliding interface where users can navigate through reviews.
-### 2. Counter
-A counter application that helps demonstrate the basics of JavaScript event handling and DOM manipulation. This project is simple yet effective for learning about state changes in a web page.
-### 3. Modal
-A modal window project that demonstrates how to create a responsive and interactive overlay. This project uses Bootstrap for styling and functionality.
-### 4. Grocery List Application
-A simple Grocery List web app built using HTML, CSS, and JavaScript. This app allows users to add, edit, and delete grocery items, and it demonstrates the use of basic DOM manipulation, event handling, and local storage.
-### 5. Color Flipper
-This is a simple web application that allows you to click a button to change the background color of the page. The app displays the name of the current background color and updates the text color to match the background color.
-### 6. Countdown
-A fun and festive Christmas countdown clock that shows the time remaining until Christmas! This project displays the remaining days, hours, minutes, and seconds in a beautifully styled layout. The design incorporates a Christmas theme with custom fonts and a countdown timer.
-### 7. Image Slider
- **Image Slider**, a visually stunning and fully responsive image slider. This project combines HTML, CSS, and JavaScript to deliver a seamless and interactive experience for users.
+*   **Browser Extension (Chrome/Edge):**
+    *   Popup UI for card creation and review.
+    *   Content script to capture selected text from webpages.
+    *   Integration with backend API for saving and retrieving cards.
+*   **Gesture Recognition:**
+    *   Uses TensorFlow.js Hand Pose Detection (MediaPipeHands Lite model).
+    *   Recognizes Thumbs Up (Easy), Flat Hand (Hard), and Thumbs Down (Wrong) gestures.
+    *   Debouncing logic to prevent accidental triggers.
+*   **Backend API (Node.js/Express):**
+    *   RESTful API for CRUD operations on flashcards (Create, Practice/Read, Update review).
+    *   Endpoints for fetching hints and basic progress statistics.
+    *   Uses PostgreSQL for persistent storage.
+*   **Persistence:**
+    *   Flashcards are stored in a PostgreSQL database.
+    *   Review difficulty updates the card's next `due_date` in the database.
+
+## Technology Stack
+
+*   **Browser Extension:** TypeScript, HTML, CSS, Chrome Extension APIs (`chrome.*`), Webpack
+*   **Gesture Recognition:** TensorFlow.js (`@tensorflow/tfjs`, `@tensorflow/tfjs-backend-webgl`), MediaPipe Hands Model (`@tensorflow-models/hand-pose-detection`)
+*   **Backend:** Node.js, Express.js, TypeScript, PostgreSQL (`pg` driver), CORS, Dotenv
+*   **Testing:**
+    *   Backend: Jest, Supertest (Integration Testing)
+    *   Extension: Jest (Unit Testing for GestureRecognizer)
+*   **Development:** ts-node-dev
+
+## Project Structure
+
+Flashcards-App/
+├── backend/ # Node.js API Server & DB Logic
+│ ├── src/
+│ └── ... (package.json, tsconfig.json, etc.)
+├── extension/ # Browser Extension Code
+│ ├── src/ # Gesture Recognizer Logic
+│ ├── dist/ # Bundled JS Output
+│ └── ... (popup.ts, popup.html, manifest.json, etc.)
+└── frontend/ # Separate React Frontend (Optional/Auxiliary UI)
+├── src/
+└── ... (package.json, vite.config.ts, etc.)
 
 
+## Setup & Running
 
-> _Note:_ Each project has its folder with a `README.md` file containing more specific information and setup instructions.
+**Prerequisites:**
 
+*   Node.js (v18+ recommended)
+*   npm (usually comes with Node.js)
+*   PostgreSQL database server running
+*   Git
 
+**Steps:**
+
+1.  **Clone Repository:**
+    ```bash
+    git clone <repository_url>
+    cd Flashcards-App
+    ```
+2.  **Backend Setup:**
+    *   Navigate to backend: `cd backend`
+    *   Install dependencies: `npm install`
+    *   Create `.env` file: Copy `.env.example` (if provided) or create `.env` and add your PostgreSQL connection details:
+        ```dotenv
+        PGHOST=localhost
+        PGUSER=your_db_user
+        PGPASSWORD=your_db_password
+        PGDATABASE=your_db_name
+        PGPORT=5432
+        PORT=3001 # Optional: Port for the backend server
+        ```
+    *   Setup Database Schema: Connect to your PostgreSQL instance using `psql` or a GUI tool. Create the database specified in `.env`. Execute the SQL commands in `backend/schema.sql` against your database.
+    *   Run Backend Dev Server: `npm run dev` (Keep this terminal running)
+
+3.  **Extension Setup:**
+    *   Navigate to extension: `cd ../extension`
+    *   Install dependencies: `npm install`
+    *   Build the extension code: `npm run build` (This creates the `dist/popup.bundle.js` file)
+
+4.  **Load Extension in Browser:**
+    *   Open Chrome/Edge.
+    *   Go to `chrome://extensions` or `edge://extensions`.
+    *   Enable "Developer mode".
+    *   Click "Load unpacked".
+    *   Select the `Flashcards-App/extension` folder.
+    *   Ensure the extension loads without errors.
+
+5.  **(Optional) Frontend React App Setup:**
+    *   Navigate to frontend: `cd ../frontend`
+    *   Install dependencies: `npm install`
+    *   Run Frontend Dev Server: `npm run dev`
+    *   Open the provided localhost URL (e.g., `http://localhost:5173`) in your browser.
+
+## Usage
+
+1.  **Capture:** Select text on a webpage, click the extension icon.
+2.  **Create:** The selected text appears as the "Front". Enter the "Back" text and click "Save Card".
+3.  **Review:** Open the extension popup. If cards are due, one will be displayed.
+4.  **Show Answer:** Click the "Show Answer" button.
+5.  **Gesture Input:** Make a clear Thumbs Up (Easy), Flat Hand (Hard), or Thumbs Down (Wrong) gesture towards the webcam. Hold briefly until the action is registered. The next card will load after a short pause.
+
+## Testing
+
+1.  **Backend Integration Tests:**
+    *   Navigate to `backend/`.
+    *   Ensure a separate test database is configured (or tests run within transactions, as currently implemented).
+    *   Run: `npm test`
+2.  **Extension Unit Tests (Gesture Recognizer):**
+    *   Navigate to `extension/`.
+    *   Run: `npm test` (Note: Jest configuration needs to be added to `extension/package.json` and `jest.config.js` created for this to work).
+
+## Design Highlights
+
+*   **Modularity:** Separated concerns between backend API, database logic, extension UI/logic, and gesture recognition.
+*   **API Specification:** Backend routes include JSDoc `@specs` defining behavior.
+*   **Testing:** Includes backend integration tests and unit tests for gesture logic.
+*   **Type Safety:** Uses TypeScript throughout the backend, extension, and frontend.
+*   **Persistence:** Utilizes PostgreSQL for reliable data storage.
+*   **Extensibility:** The API-driven design allows for different frontends (extension, web app) to interact with the same flashcard data.
+
+## Known Issues / Future Work
+
+*   SRS logic in the backend `/api/update` is currently simplified (fixed intervals); could be enhanced using `interval` and `ease_factor` from the database based on a more complete algorithm (like SM-2).
+*   Progress statistics (`/api/progress`) are basic; accuracy and average difficulty require implementing review history tracking.
+*   Gesture recognition thresholds might need further tuning for robustness across different lighting/angles.
+*   Error handling in the UI could provide more specific feedback or retry options.
+*   Consider sharing type definitions between `backend` and `extension`.
+*   (Add any other specific limitations or ideas).
+
+## Authors
+
+*   [Your Name/Team Member Names]
+
+## License
+
+*   MIT (or your chosen license)
