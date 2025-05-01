@@ -47,21 +47,6 @@ The system uses a simple Spaced Repetition System (SRS) logic on the backend to 
     *   Extension: Jest (Unit Testing for GestureRecognizer)
 *   **Development:** ts-node-dev
 
-## Project Structure
-
-Flashcards-App/
-├── backend/ # Node.js API Server & DB Logic
-│ ├── src/
-│ └── ... (package.json, tsconfig.json, etc.)
-├── extension/ # Browser Extension Code
-│ ├── src/ # Gesture Recognizer Logic
-│ ├── dist/ # Bundled JS Output
-│ └── ... (popup.ts, popup.html, manifest.json, etc.)
-└── frontend/ # Separate React Frontend (Optional/Auxiliary UI)
-├── src/
-└── ... (package.json, vite.config.ts, etc.)
-
-
 ## Setup & Running
 
 **Prerequisites:**
