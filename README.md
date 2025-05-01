@@ -2,8 +2,8 @@
 
 ## Authors
 
-Megi Bagashvili
-Mariam Shushanashvili
+* Megi Bagashvili
+* Mariam Shushanashvili
 
 
 ## Description
