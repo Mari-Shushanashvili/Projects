@@ -1,4 +1,10 @@
-# Flashcard Quick Capture & Gesture Review (MIT 6.102 Project)
+# Flashcard Quick Capture & Gesture Review
+
+## Authors
+
+Megi Bagashvili
+Mariam Shushanashvili
+
 
 ## Description
 
@@ -29,13 +35,13 @@ The system uses a simple Spaced Repetition System (SRS) logic on the backend to 
     *   Uses PostgreSQL for persistent storage.
 *   **Persistence:**
     *   Flashcards are stored in a PostgreSQL database.
-    *   Review difficulty updates the card's next `due_date` in the database.
+    *   Review difficulty updates the card's next due_date in the database.
 
 ## Technology Stack
 
-*   **Browser Extension:** TypeScript, HTML, CSS, Chrome Extension APIs (`chrome.*`), Webpack
-*   **Gesture Recognition:** TensorFlow.js (`@tensorflow/tfjs`, `@tensorflow/tfjs-backend-webgl`), MediaPipe Hands Model (`@tensorflow-models/hand-pose-detection`)
-*   **Backend:** Node.js, Express.js, TypeScript, PostgreSQL (`pg` driver), CORS, Dotenv
+*   **Browser Extension:** TypeScript, HTML, CSS, Chrome Extension APIs
+*   **Gesture Recognition:** TensorFlow.js (@tensorflow/tfjs, @tensorflow/tfjs-backend-webgl), MediaPipe Hands Model (@tensorflow-models/hand-pose-detection)
+*   **Backend:** Node.js, Express.js, TypeScript, PostgreSQL, CORS, Dotenv
 *   **Testing:**
     *   Backend: Jest, Supertest (Integration Testing)
     *   Extension: Jest (Unit Testing for GestureRecognizer)
@@ -100,12 +106,6 @@ Flashcards-App/
     *   Select the `Flashcards-App/extension` folder.
     *   Ensure the extension loads without errors.
 
-5.  **(Optional) Frontend React App Setup:**
-    *   Navigate to frontend: `cd ../frontend`
-    *   Install dependencies: `npm install`
-    *   Run Frontend Dev Server: `npm run dev`
-    *   Open the provided localhost URL (e.g., `http://localhost:5173`) in your browser.
-
 ## Usage
 
 1.  **Capture:** Select text on a webpage, click the extension icon.
@@ -129,23 +129,9 @@ Flashcards-App/
 *   **Modularity:** Separated concerns between backend API, database logic, extension UI/logic, and gesture recognition.
 *   **API Specification:** Backend routes include JSDoc `@specs` defining behavior.
 *   **Testing:** Includes backend integration tests and unit tests for gesture logic.
-*   **Type Safety:** Uses TypeScript throughout the backend, extension, and frontend.
+*   **Type Safety:** Uses TypeScript throughout the backend, extension.
 *   **Persistence:** Utilizes PostgreSQL for reliable data storage.
 *   **Extensibility:** The API-driven design allows for different frontends (extension, web app) to interact with the same flashcard data.
 
-## Known Issues / Future Work
 
-*   SRS logic in the backend `/api/update` is currently simplified (fixed intervals); could be enhanced using `interval` and `ease_factor` from the database based on a more complete algorithm (like SM-2).
-*   Progress statistics (`/api/progress`) are basic; accuracy and average difficulty require implementing review history tracking.
-*   Gesture recognition thresholds might need further tuning for robustness across different lighting/angles.
-*   Error handling in the UI could provide more specific feedback or retry options.
-*   Consider sharing type definitions between `backend` and `extension`.
-*   (Add any other specific limitations or ideas).
 
-## Authors
-
-*   [Your Name/Team Member Names]
-
-## License
-
-*   MIT (or your chosen license)
